@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura&display=swap');
+
+* {
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        line-height: 1.25em;
+    }
+
+body{
+    margin:0;
+    width:100%;
+    height:100vh;
+    padding:5%;
+-webkit-box-align: center;
+	-ms-flex-align: center;
+	    align-items: center;
+-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	    justify-content: center;
+font-family: 'Jura', sans-serif;
+}
+
+.back-container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    box-align: center;
+    padding:5px;
+}
+
+.main-container{
+    width:85%;
+    height:555px;
+    background:#F4EADD;
+    /*border:0 4px #5A3C24 solid;*/
+    border-radius:55px;
+    box-shadow: 0 0 55px -10px rgba(0,0,0,0.7);
+}
+
+
+/* Search bar */
+
+.search-container{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    background-color:#FE8E8D;
+    height:55px;
+    width:100%;
+    border:3px #5A3C24 solid;
+    border-radius:15px;
+}
+
+
+.citySearch{
+    background-color:#F4EADD;
+    width:55%;
+    height:65%;
+    border-radius:10px;
+    border:3px #5A3C24 solid;
+    font-size:20px;
+    color: RGB (238, 238, 238, .9%);	
+    box-shadow: 4px 4px 4px 0 rgba(0,0,0,0.4);		
+    font-family: 'Jura', sans-serif;
+}
+
+.searchBTN{
+    position:relative;
+    margin:1%;
+    height:55%;
+    width:5%;
+    background-color:#FE8E8D;
+    border-radius:10px;
+    border:3px #5A3C24 solid;
+    box-shadow: 4px 4px 4px 0 rgba(0,0,0,0.3);	
+}
+
+.fa-magnifying-glass{
+    color:white;
+    z-index:3;
+}
+
+.searchBTN:hover{
+    cursor:pointer;
+    border:4px dotted #eee;
+   outline:3px #5A3C24 solid;
+}
+
+.current-location-button{
+    position:relative;
+    margin:.5%;
+    height:55%;
+    width:2.8%;
+    background-color:#FE8E8D;
+    border-radius:10px;
+    border:3px #5A3C24 solid;
+    box-shadow: 4px 4px 4px 0 rgba(0,0,0,0.3);	
+    color: white;
+}
+
+.current-location-button:hover{
+    cursor:pointer;
+    border:4px dotted #eee;
+   outline:3px #5A3C24 solid;
+}
+
+.fa-x{
+    position:relative;
+    left:14%;
+}
+
+.fa-arrow-left{
+    position:relative;
+    left:-8%;
+}
+
+
+/*=========================== CITY CONTAINER ==========*/
+
+.city-main-info{
+    width:100%;
+}
+.name-container{
+    text-align:center;
+}
+.city-input{
+    margin:0;
+    color:#AA8DFE;
+    font-size:55px;
+}
+
+ul,
+ul h1{  
+    padding:0;
+    line-height:1.5;
+}
+
+li{
+    line-height:1;
+    list-style-type:none;
+    font-size:20px;
+}
+/*============================TEMPERATURE CONTAINER =====================*/
+
+.weather-temperature{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:-5px;
+}
+.temperature{
+   margin-top:2%;
+   text-align: center;
+   font-size:75px;
+}
+.degree{
+    text-decoration: none;
+    color:black;
+    margin:5px;
+}
+.weather-temperature .active {
+    color: #fff;
+  }
+  
+  .weather-temperature .active:hover {
+    text-decoration: none;
+  }
+  
+  /*============================SIDE WEATHER INFO CONTAINER =====================*/
+.minorTemp{
+    position:relative;
+    top:-55%;
+    left:75%;
+}
+
+ul{
+    display:flex;
+    flex-direction: column;
+}
+
+li{
+    line-height:1.5;
+}
+
+.iconyThings{
+    font-family: 'Jura', sans-serif;
+    color:#AA8DFE;
+}
+
+ /*============================MULTI DAY WEATHER FORECAST =====================*/
+
+.forecast-multi-day{
+    position:relative;
+    top:-45%;
+    left:5%;
+    text-align:center;
+    display:inline-block;
+}
+
+.weather-forecast{
+    text-align:center;
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+/*
+/*.weather-container:hover{
+    transform:translate(42px, 18px);
+}
+.weather-container{
+    background-image: url(/mountains.jpeg);
+    background-size: cover;
+    position:relative;
+    height:100%;
+    width:55%;
+    border:1px solid darkslategray;
+    border-radius:50px;
+}
+*/
+
+
+/* ==================================MEDIA QUERIES =======================================*/
+
+@media screen and (max-width: 480px) {
+    .back-container{
+        display:flex;
+        justify-content: center;
+    }
+}

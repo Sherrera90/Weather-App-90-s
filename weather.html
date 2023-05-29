@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="w-src/weather.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/617a156481.js" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="back-container">
+        <div class ="main-container">
+            <!----<div class="weather-container">---->
+            <div class ="search-container">
+                <i class="fa-sharp fa-solid fa-arrow-left fa-xl"></i>
+                <input type="text" placeholder="Type a city..." autocomplete="off" autofocus="on" 
+                id="city-input" class="citySearch" />
+                <button type="submit" value="" class="searchBTN" id="search-form"> 
+                    <i class="fa-magnifying-glass fa"></i></button>
+                <button class="current-location-button" id="location-icon">
+                    <i class="fa fa-location-dot"></i>
+                </button>
+                <i class="fa-solid fa-x fa-xl"></i>
+            </div>
+            <div class="clearfix city-main-info">
+                <!-----<div class="image-city"> 
+                    <img src="" />----->
+                </div>
+                <div class="name-container">
+                  <ul>
+                    <h1 class="city-input" id="city">Atlanta</h1>
+                        <li class="date-input" id="day-display">0/0/0</li>
+                        <li class="time-input" id="time-display"> 0:00</li>
+                    </ul>
+                </div>
+                       <!---<button id="location-icon" class="iconGeo">--->
+            <div class ="clearfix weather-temperature">
+                <h2 class="temperature" id="temperature"></h2>
+                <span class="degree-options">
+                <a href="#" class="degree" id="celsius-link"> °C </a> |
+                <a href="#"  class="degree" id="fahrenheit-link"> °F </a>
+                </span>
+            </div>                    
+        <div class="minorTemp">
+            <ul>
+                <li><span class ="iconyThings" id="icon-description-pic"></span></li>
+                <li class ="iconyThings" id ="description"></li>
+                <li> Feels like: <span class="iconyThings" id="feels-like"></span></li>
+                <li> Wind: <span class="iconyThings" id="current-wind"></span></li>
+               <li> Humidity: <span class="iconyThings" id="current-humidity"></span></li>
+            </ul>
+         </div>
+         <div class="forecast-multi-day">
+         <div class ="row weather-forecast" id="forecast"></div>
+        </div>
+      </div>
+    </div>
+    <script src="/w-src/weather.js" ></script>
+</body>
+</html>
