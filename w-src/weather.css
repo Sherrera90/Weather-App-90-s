@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura&display=swap');
 
+
 * {
         -webkit-box-sizing: border-box;
                 box-sizing: border-box;
@@ -10,7 +11,7 @@ body{
     margin:0;
     width:100%;
     height:100vh;
-    padding:5%;
+    padding:3%;
 -webkit-box-align: center;
 	-ms-flex-align: center;
 	    align-items: center;
@@ -18,21 +19,35 @@ body{
 	-ms-flex-pack: center;
 	    justify-content: center;
 font-family: 'Jura', sans-serif;
+color:#230338;
 }
 
 .back-container{
+    position:relative;
     display:flex;
     align-items: center;
     justify-content: center;
     box-align: center;
     padding:5px;
+    font-weight:700;
+}
+.back-container::before{
+    /* background:#F4EADD;*/
+    content:" ";
+   background-image:url('/imgs/fuzzyslashthingdoodah.svg');
+   background-size: cover;
+   position:absolute;
+   top:0px;
+   right:0px;
+   bottom:0px;
+   left:0px;
+   opacity:0.75;
 }
 
 .main-container{
-    width:85%;
+    position:relative;
+    width:75%;
     height:555px;
-    background:#F4EADD;
-    /*border:0 4px #5A3C24 solid;*/
     border-radius:55px;
     box-shadow: 0 0 55px -10px rgba(0,0,0,0.7);
 }
@@ -44,7 +59,9 @@ font-family: 'Jura', sans-serif;
     display:flex;
     justify-content: center;
     align-items:center;
-    background-color:#FE8E8D;
+    background: #7F7FD5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height:55px;
     width:100%;
     border:3px #5A3C24 solid;
@@ -104,52 +121,96 @@ font-family: 'Jura', sans-serif;
    outline:3px #5A3C24 solid;
 }
 
-.fa-x{
+.exBox,
+.minusBox{
     position:relative;
-    left:14%;
+    left:110px;
+    background-color:#CCCCCC;
+    width:25px;
+    height:25px;
+    border:2px solid black;
+    border-radius:8px;
+    margin:5px;
 }
-
-.fa-arrow-left{
-    position:relative;
-    left:-8%;
-}
-
-
 /*=========================== CITY CONTAINER ==========*/
 
-.city-main-info{
+.weather-main-info{
     width:100%;
+    height:45.5%;
+    margin-top:15px;
 }
+
+.top-column-info{
+    width:100%;
+    height:100%;
+}
+
 .name-container{
-    text-align:center;
+    position:relative;
+    background-image:url('/imgs/fuzzyslashthingdoodah.svg');
+    background-size:cover;
+    border:2px solid #5A3C24;
+    border-radius:10px;
+    height:100%;
+    width:35%;
+    float:left;
+    margin-left:15px;
 }
+.locationExe{
+    position:absolute;
+    background: #2193b0;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width:100%;
+    height:12%;
+    border-radius:8px;
+    border:0 2px solid #5A3C24;
+}
+.locationExe h2{
+    display:inline;
+    color:#FB4FAD;
+}
+
 .city-input{
-    margin:0;
-    color:#AA8DFE;
-    font-size:55px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#FB4FAD;
+    text-shadow: 3px 3px white;	
+    font-size:3.5em;
+    font-family: 'Jura', sans-serif;
 }
 
 ul,
-ul h1{  
-    padding:0;
+ul h1,
+li{  
     line-height:1.5;
-}
-
-li{
-    line-height:1;
+    flex-direction:column;
+    line-height:1.5;
     list-style-type:none;
     font-size:20px;
 }
 /*============================TEMPERATURE CONTAINER =====================*/
 
 .weather-temperature{
+    float:left;
     display:flex;
-    justify-content: center;
-    align-items: center;
-    margin:-5px;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    width:30%;
+    height:100%;
+    font-family: 'Jura', sans-serif;
+    font-weight:bold;
+}
+.date-list{
+    text-align:center;
+    position:relative;
+    left:-5%;
 }
 .temperature{
-   margin-top:2%;
+    margin-top:2%;
    text-align: center;
    font-size:75px;
 }
@@ -158,68 +219,62 @@ li{
     color:black;
     margin:5px;
 }
-.weather-temperature .active {
-    color: #fff;
-  }
-  
-  .weather-temperature .active:hover {
-    text-decoration: none;
-  }
-  
-  /*============================SIDE WEATHER INFO CONTAINER =====================*/
-.minorTemp{
+
+.units{
     position:relative;
-    top:-55%;
-    left:75%;
+    top:-15%;
 }
 
-ul{
+.degree-options{
     display:flex;
-    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
 }
 
-li{
-    line-height:1.5;
+  /*============================SIDE WEATHER INFO CONTAINER =====================*/
+.minorTemp{  
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100%;
+}
+.side-temp-container{
+    height:80%;
+    width:100%;
+    text-align:center;
+    display:flex;
+    justify-content: flex-end;
+    font-weight:700;
 }
 
-.iconyThings{
-    font-family: 'Jura', sans-serif;
-    color:#AA8DFE;
-}
 
  /*============================MULTI DAY WEATHER FORECAST =====================*/
 
-.forecast-multi-day{
+ /*.forecast-multi-day{
     position:relative;
-    top:-45%;
-    left:5%;
-    text-align:center;
-    display:inline-block;
-}
+    display:block;
+    width:100%;
+}*/
 
 .weather-forecast{
     text-align:center;
     display:flex;
-    justify-content: center;
+    align-items:center;
     flex-direction: row;
+    width:100%;
+    display:flex;
+    justify-content: space-around;
+    font-size:1.2em;
 }
 
-/*
-/*.weather-container:hover{
-    transform:translate(42px, 18px);
+.weather-forecast img{
+    width:100px;
 }
-.weather-container{
-    background-image: url(/mountains.jpeg);
-    background-size: cover;
-    position:relative;
-    height:100%;
-    width:55%;
-    border:1px solid darkslategray;
-    border-radius:50px;
+
+.weather-forecast strong{
+    color:#FB4FAD;
 }
-*/
-
-
 /* ==================================MEDIA QUERIES =======================================*/
 
 @media screen and (max-width: 480px) {
